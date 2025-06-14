@@ -23,14 +23,14 @@ body {
     #F9FAFB,          /* light color start */
     #D2D6DB           /* darker color end */
   );
-  padding: 200px 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 article {
   display: flex;
   flex-direction: column;
-  width: 340px;
+  max-width: 340px;
+  margin-top: 200px;
   padding: 24px;
   gap: 16px;
   background: #FFFFFF;
@@ -51,6 +51,14 @@ img {
 .header-name-container {
   display: flex;
   flex-direction: column;
+  max-width: 228px;
+}
+
+.header-name-container h3,
+.header-name-container p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h3 {
@@ -61,9 +69,17 @@ h3 {
   color: #171717;
 }
 
+.header-name-container p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 p {
   margin: 0;
   color: #525252;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .credits {
